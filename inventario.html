@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inventario</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <figure class="logo">
+
+            <i class="fa-solid fa-motorcycle"></i>
+
+            <figcaption>
+                T-E-S Inventory.
+            </figcaption>
+
+        </figure>
+
+        <nav>
+
+            <ul class="menu">
+
+                <li>
+                    <a href="index.html">
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#tablaProductos">
+                        Productos
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main class="inventory">
+
+        <section class="form-section">
+
+            <h1>
+                Inventario
+            </h1>
+
+            <p>
+                Agrega nuevos productos al sistema
+            </p>
+
+            <input
+            type="text"
+            id="nombre"
+            placeholder="Nombre">
+
+            <input
+            type="text"
+            id="descripcion"
+            placeholder="Descripción">
+
+            <input
+            type="text"
+            id="categoria"
+            placeholder="Categoría">
+
+            <input
+            type="number"
+            id="precio"
+            placeholder="Precio">
+
+            <input
+            type="number"
+            id="cantidad"
+            placeholder="Cantidad">
+
+            <input
+            type="text"
+            id="imagen"
+            placeholder="URL Imagen">
+
+            <button
+            onclick="agregarProducto()"
+            class="btn-primary">
+
+                Guardar Producto
+
+            </button>
+
+            <button
+            onclick="logout()"
+            class="btn-secondary">
+
+                Cerrar Sesión
+
+            </button>
+
+        </section>
+
+        <section class="table-section">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Nombre
+                        </th>
+
+                        <th>
+                            Categoría
+                        </th>
+
+                        <th>
+                            Precio
+                        </th>
+
+                        <th>
+                            Cantidad
+                        </th>
+
+                        <th>
+                            Acciones
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="tablaProductos">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+    <script src="js/supabase.js"></script>
+
+    <script src="js/auth.js"></script>
+
+    <script src="js/crud.js"></script>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
